@@ -8,9 +8,9 @@
     "node": "10.16.0",
     "yarn": "1.16.0"
   },
-  "scripts": {                          
-    "build": "yarn --cwd client install && yarn --cwd client build",
+  "scripts": {
+    "build": "cd client && yarn install && yarn build && cd ..",
     "deploy": "cp -a client/build/. public/",
-    "heroku-postbuild": "yarn build && yarn deploy"
-  }
+    "postinstall": "yarn build && yarn deploy && echo 'Client built!'"
+  },
 }
