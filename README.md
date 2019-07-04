@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application goes along with the Deploy Rails API with React to Heroku Tutorial. Instructions on building this app are at:
 
-Things you may want to cover:
+https://www.techandstartup.com/tutorials/rails-react-heroku
 
-* Ruby version
+This app conists of two parts:
 
-* System dependencies
+1) The Ruby on Rails API-only back end application.
 
-* Configuration
+2) The React front end app, which is in the client directory.
 
-* Database creation
+To run this app locally first start the Rails server on port 3001: rails server -p 3001
 
-* Database initialization
+Then run the Node server to start React: yarn --cwd client start
 
-* How to run the test suite
+The app will launch on port 3000.
 
-* Services (job queues, cache servers, search engines, etc.)
+If you have the foreman gem installed you can run both servers with one command:
 
-* Deployment instructions
-
-* ...
+foreman start -f Procfile.dev
